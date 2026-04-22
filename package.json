@@ -1,0 +1,37 @@
+{
+  "name": "psdcoder.dev",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.1+sha512.05ba3c1d5d1c18f68df06470d74055e62d41fc110a0c660db1b2dfb2785327f04cf0f68345d4609bc52089e7fa0343c31593b2f9594e2c5d5da426230acc9820",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "typecheck": "astro check",
+    "lint": "pnpm --sequential run /^lint:/",
+    "lint:oxlint": "oxlint .",
+    "lint:prettier": "prettier --check . --experimental-cli",
+    "lint:stylelint": "stylelint 'src/**/*.css' --allow-empty-input",
+    "format": "pnpm --sequential run /^format:/",
+    "format:oxlint": "oxlint --fix --fix-suggestions .",
+    "format:prettier": "prettier . --write --experimental-cli"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/ts-plugin": "^1.10.7",
+    "@prettier/plugin-oxc": "^0.1.4",
+    "astro": "^6.1.8",
+    "oxlint": "^1.61.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^17.8.0",
+    "stylelint-config-clean-order": "^8.0.1",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^11.2.1"
+  }
+}

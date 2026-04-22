@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "oxc.oxc-vscode",
+    "EditorConfig.EditorConfig",
+    "YoavBls.pretty-ts-errors",
+    "stylelint.vscode-stylelint"
+  ],
+  "unwantedRecommendations": []
+}

@@ -1,0 +1,9 @@
+{
+  "categories": {
+    "correctness": "warn"
+  },
+  "rules": {
+    "no-unused-vars": "error"
+  },
+  "ignorePatterns": ["node_modules", "dist", ".astro", "docs"]
+}
