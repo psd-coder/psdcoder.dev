@@ -1,0 +1,16 @@
+{
+  "name": "psdcoder.dev",
+  "short_name": "psdcoder",
+  "description": "Pavel Grinchenko — senior frontend engineer at Evil Martians. Design systems, dense interfaces, local-first apps.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "theme_color": "#f2ecde",
+  "background_color": "#f2ecde",
+  "icons": [
+    { "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
