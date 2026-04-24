@@ -1,0 +1,19 @@
+@import url("~/styles/media.css");
+
+.body {
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-double);
+
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: var(--padding-double);
+
+  @media (--mobiles) {
+    padding: var(--padding);
+  }
+}

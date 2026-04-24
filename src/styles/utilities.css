@@ -1,0 +1,10 @@
+.bg-stripes {
+  background: var(--color-surface)
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      var(--color-border) 2px,
+      var(--color-border) 4px
+    );
+}

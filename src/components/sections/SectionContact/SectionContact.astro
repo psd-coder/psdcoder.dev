@@ -1,0 +1,31 @@
+---
+import { SOCIALS } from "~/constants";
+import styles from "./styles.module.css";
+
+const ID = "contact-heading";
+const LINKS = [
+  { label: "GitHub", href: SOCIALS.github },
+  { label: "X", href: SOCIALS.twitter },
+  { label: "LinkedIn", href: SOCIALS.linkedin },
+] as const;
+---
+
+<section class={styles.section} aria-labelledby={ID}>
+  <h2 id={ID} class={styles.heading}>
+    Contact <span class={styles.accent}>Me</span><span
+      class:list={[styles.accent]}
+      aria-hidden="true">!</span
+    >
+  </h2>
+  <ul class={styles.links}>
+    {
+      LINKS.map((link) => (
+        <li>
+          <a class={styles.link} href={link.href}>
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

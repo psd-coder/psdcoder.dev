@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Card } from "~/components/ui/Card";
+import styles from "./styles.module.css";
+
+type Props = {
+  project: CollectionEntry<"projects">;
+};
+
+const { project } = Astro.props;
+const { name, description, role, tags, href, logo } = project.data;
+---
+
+<li>
+  <Card as="a" class={styles.project} href={href}>
+    <img class={styles.logo} aria-hidden="true" src={logo} alt="" width="44" height="44" />
+    <span class={styles.content}>
+      <h3 class={styles.title}>
+        {name}
+        {role && <span class={styles.role}>{role}</span>}
+      </h3>
+      <p class={styles.description}>{description}</p>
+    </span>
+    <span class={styles.tags}>
+      {tags.join(" / ")}
+    </span>
+  </Card>
+</li>

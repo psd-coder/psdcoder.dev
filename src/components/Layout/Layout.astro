@@ -1,0 +1,30 @@
+---
+import { Font } from "astro:assets";
+import "~/styles/index.css";
+import styles from "./styles.module.css";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-serif" preload />
+    <Font cssVariable="--font-mono" preload />
+  </head>
+  <body class:list={["bg-stripes", styles.body]}>
+    <main class={styles.main}>
+      <slot />
+    </main>
+  </body>
+</html>

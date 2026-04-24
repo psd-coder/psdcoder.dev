@@ -1,13 +1,18 @@
 ---
+import { Layout } from "~/components/Layout";
+import { SectionArticles } from "~/components/sections/SectionArticles";
+import { SectionContact } from "~/components/sections/SectionContact";
+import { SectionHero } from "~/components/sections/SectionHero";
+import { SectionProjects } from "~/components/sections/SectionProjects";
+import { META } from "~/constants";
+import { getArticles, getProjects } from "~/content.config";
 
+const [projects, articles] = await Promise.all([getProjects(), getArticles()]);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>psdcoder.dev</title>
-  </head>
-  <body></body>
-</html>
+<Layout title={META.title} description={META.description}>
+  <SectionHero />
+  <SectionProjects projects={projects} />
+  <SectionArticles articles={articles} />
+  <SectionContact />
+</Layout>

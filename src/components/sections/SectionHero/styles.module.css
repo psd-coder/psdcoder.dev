@@ -1,0 +1,178 @@
+@import url("~/styles/media.css");
+
+.hero {
+  background: var(--color-surface);
+}
+
+.block {
+  padding: var(--padding-double);
+}
+
+.header {
+  display: flex;
+  gap: var(--padding);
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--padding);
+  padding-bottom: var(--padding);
+  border-bottom: var(--border-thin) solid var(--color-border);
+
+  @media (--mobiles) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.headerPiece {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-meta);
+  white-space: nowrap;
+}
+
+.siteName {
+  font-weight: 700;
+}
+
+.separator {
+  color: var(--color-muted);
+}
+
+.slogan {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: calc(var(--spacing) * 8);
+
+  font-size: clamp(3rem, 10vw, 9.25rem);
+  line-height: 0.9;
+
+  @media (--mobiles) {
+    margin-bottom: calc(var(--spacing) * 4);
+    font-size: clamp(2.5rem, 12vw, 6.5rem);
+  }
+}
+
+.sloganLine {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.crafting {
+  rotate: -3deg;
+
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: var(--tracking);
+}
+
+.frontend {
+  z-index: 0;
+  rotate: 2deg;
+
+  align-self: flex-end;
+
+  font-family: var(--font-sans);
+  font-variation-settings:
+    "wght" 900,
+    "wdth" 200;
+  font-weight: 400;
+  line-height: 0.8em;
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-tighter);
+
+  @media (--tablets) {
+    line-height: 1em;
+  }
+}
+
+.eraLine {
+  @media (--mobiles) {
+    margin-top: -0.7em;
+  }
+}
+
+.since {
+  transform-origin: top left;
+  translate: 0.1em 0.2em;
+  rotate: 7deg;
+
+  display: inline-block;
+
+  font-family: var(--font-serif);
+  font-size: 0.7em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-accent-primary);
+  letter-spacing: var(--tracking-tighter);
+}
+
+.photoshop {
+  rotate: -4deg;
+
+  display: inline-block;
+
+  font-family: var(--font-serif);
+  font-size: 0.9em;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: var(--tracking-tighter);
+  white-space: nowrap;
+}
+
+.ancientBadge {
+  position: relative;
+  z-index: 0;
+  rotate: -4deg;
+
+  display: inline-block;
+  align-self: center;
+
+  margin-top: 0.8em;
+  padding: 0.3em;
+
+  font-family: var(--font-mono);
+  font-size: 0.3em;
+  font-weight: 400;
+  color: var(--color-surface);
+  letter-spacing: var(--tracking-tightest);
+
+  background: var(--color-accent-secondary);
+}
+
+.about {
+  color: var(--color-surface);
+  background: var(--color-accent-primary);
+}
+
+.aboutText {
+  max-width: 65ch;
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.companyLink {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: oklch(from currentcolor l c h / 55%);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.15em;
+
+  transition: text-decoration-color 0.15s;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-color: currentcolor;
+  }
+}

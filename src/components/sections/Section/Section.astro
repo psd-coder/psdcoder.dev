@@ -1,0 +1,17 @@
+---
+import styles from "./styles.module.css";
+
+type Props = {
+  id: string;
+};
+
+const { id } = Astro.props;
+const headingId = `${id}-heading`;
+---
+
+<section class={styles.section} aria-labelledby={headingId}>
+  <h2 id={headingId} class={styles.heading}>
+    <slot name="title" />
+  </h2>
+  <slot />
+</section>

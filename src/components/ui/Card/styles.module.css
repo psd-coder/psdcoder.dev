@@ -1,0 +1,22 @@
+@import url("~/styles/media.css");
+
+.card {
+  padding: var(--padding);
+  background: var(--color-surface);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-surface);
+    background: var(--color-primary);
+  }
+
+  @media (--motion) {
+    transition:
+      background 0.15s,
+      color 0.15s;
+  }
+
+  @media (--tablets) {
+    padding: var(--padding-double);
+  }
+}

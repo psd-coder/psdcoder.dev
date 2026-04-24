@@ -1,0 +1,66 @@
+@import url("./media.css");
+
+* {
+  scrollbar-color: oklch(from var(--color-accent-primary) calc(l + 0.1) c h) transparent;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  letter-spacing: var(--tracking-normal);
+  background: var(--color-surface);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: var(--color-selection-fg);
+  background: var(--color-selection-bg);
+}
+
+.prose {
+  a {
+    position: relative;
+
+    display: inline-block;
+
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: oklch(from currentcolor l c h / 60%);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    &:hover,
+    &:focus-visible {
+      translate: 0 -2px;
+      text-decoration-color: currentcolor;
+    }
+
+    &:hover::before,
+    &:focus-visible::before {
+      translate: 0 2px;
+    }
+
+    @media (--motion) {
+      transition:
+        translate 0.15s,
+        text-decoration-color 0.15s;
+    }
+  }
+}

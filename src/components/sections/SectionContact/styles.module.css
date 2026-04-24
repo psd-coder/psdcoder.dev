@@ -1,0 +1,81 @@
+@import url("~/styles/media.css");
+
+.section {
+  display: flex;
+  gap: calc(var(--padding-double) * 2);
+  justify-content: space-between;
+
+  padding: var(--padding-double);
+
+  color: var(--color-surface);
+
+  background: var(--color-primary);
+
+  @media (--mobiles) {
+    flex-direction: column;
+    gap: var(--padding-double);
+  }
+}
+
+.heading {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: var(--tracking-tighter);
+  white-space: nowrap;
+}
+
+.accent {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-accent-primary);
+  letter-spacing: var(--tracking-headline);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  list-style: none;
+}
+
+.link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--spacing) 0;
+
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-surface);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-normal);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  &:hover,
+  &:focus-visible {
+    translate: calc(var(--spacing) * 2) 0;
+    color: var(--color-accent-primary);
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    translate: calc(var(--spacing) * -2) 0;
+  }
+
+  @media (--motion) {
+    transition:
+      translate 0.15s,
+      color 0.15s;
+  }
+}

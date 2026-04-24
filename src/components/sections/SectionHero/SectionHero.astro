@@ -1,0 +1,39 @@
+---
+import { SITE } from "~/constants";
+import { Separator } from "~/components/ui/Separator";
+import styles from "./styles.module.css";
+---
+
+<header class={styles.hero}>
+  <div class={styles.block}>
+    <div class={styles.header}>
+      <div>
+        <span class:list={[styles.headerPiece, styles.siteName]}>{SITE.name}</span>
+        <Separator />
+        <span class={styles.headerPiece}>{SITE.author}</span>
+      </div>
+      <div>
+        <span class={styles.headerPiece}>{SITE.role}</span>
+        <Separator />
+        <span class={styles.headerPiece}>{SITE.location}</span>
+      </div>
+    </div>
+    <h1 class={styles.slogan}>
+      <span class:list={[styles.sloganLine, styles.crafting]}>Crafting</span>
+      <span class:list={[styles.sloganLine, styles.frontend]}>frontend</span>
+      <span class:list={[styles.sloganLine, styles.eraLine]}>
+        <span class={styles.since}>since</span>
+        <span class={styles.photoshop}>the Photoshop era</span>
+      </span>
+      <span class:list={[styles.sloganLine, styles.ancientBadge]}>Ancient, I know ¯\_(ツ)_/¯</span>
+    </h1>
+  </div>
+  <div class:list={[styles.block, styles.about]}>
+    <p class:list={["prose", styles.aboutText]}>
+      I'm Pavel. Senior engineer at <a href={SITE.companyUrl}>{SITE.company}</a>. I build
+      interfaces, component systems, and architecture for projects that expect to still exist next
+      year. Prefer native APIs, keep business logic out of components, and choose the stack to fit
+      the project.
+    </p>
+  </div>
+</header>

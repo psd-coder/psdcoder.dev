@@ -1,0 +1,48 @@
+[
+  {
+    "id": "typed-channel",
+    "name": "Typed-Channel",
+    "description": "Type-safe communication channel for sending and receiving messages between different contexts — workers, iframes, tabs, Figma plugins.",
+    "tags": ["typescript", "communication"],
+    "href": "https://typed-channel.psdcoder.dev",
+    "logo": "projects/typed-channel.svg",
+    "order": 3
+  },
+  {
+    "id": "nanotags",
+    "name": "Nanotags",
+    "description": "Nanotags is a lightweight, TypeScript-friendly library for building reactive Web Components on top of standard DOM APIs and Nano Stores, with automatic cleanup and hydration-first support in under 2.5 KB.",
+    "tags": ["custom elements", "nanostores", "reactive UI", "typescript"],
+    "href": "https://nanotags.psdcoder.dev",
+    "logo": "projects/nanotags.svg",
+    "order": 1
+  },
+  {
+    "id": "astro-pigment",
+    "name": "Astro-Pigment",
+    "description": "Astro 6 documentation theme that turns markdown content into a polished docs site with dark mode, interactive playgrounds, SEO routes, and LLM-friendly endpoints in a single integration.",
+    "tags": ["astro", "documentation", "theme"],
+    "href": "https://astro-pigment.psdcoder.dev",
+    "logo": "projects/astro-pigment.svg",
+    "order": 2
+  },
+  {
+    "id": "harmonizer",
+    "name": "Harmonizer",
+    "role": "developer",
+    "description": "Harmonizer is an open-source color palette generator for UI design that creates accessible, perceptually consistent shades and contrast levels using OKLCH and APCA, available as both a web app and a Figma plugin.",
+    "tags": ["palette generator", "oklch", "apca", "figma plugin"],
+    "href": "https://harmonizer.evilmartians.com",
+    "logo": "projects/harmonizer.svg",
+    "order": 4
+  },
+  {
+    "id": "code-to-markup",
+    "name": "Code-to-Markup",
+    "description": "Convert code snippets into beautifully highlighted, self-contained HTML markup ready to paste into slides, docs, or emails.",
+    "tags": ["syntax highlighting", "html", "tooling"],
+    "href": "https://psd-coder.github.io/code-to-markup/",
+    "logo": "projects/code-to-markup.svg",
+    "order": 5
+  }
+]

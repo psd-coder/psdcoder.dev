@@ -1,0 +1,26 @@
+@import url("~/styles/media.css");
+
+.section {
+  padding: var(--padding);
+  background: var(--color-border);
+}
+
+.heading {
+  margin-bottom: var(--padding);
+  padding-inline-start: var(--padding);
+
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: var(--leading-headline);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-tighter);
+
+  em {
+    font-family: var(--font-serif);
+    font-size: 0.75em;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--color-accent-primary);
+    letter-spacing: var(--tracking-normal);
+  }
+}

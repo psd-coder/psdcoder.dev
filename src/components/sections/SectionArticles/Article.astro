@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Card } from "~/components/ui/Card";
+import { Separator } from "~/components/ui/Separator";
+import styles from "./styles.module.css";
+
+type Props = {
+  article: CollectionEntry<"articles">;
+};
+
+const { article } = Astro.props;
+const { title, description, source, date, href } = article.data;
+const isoDate = date.toISOString().slice(0, 10);
+const displayDate = date.toLocaleDateString("en-US", {
+  month: "short",
+  year: "numeric",
+  day: "numeric",
+});
+---
+
+<li>
+  <Card as="a" class={styles.card} href={href}>
+    <span class={styles.article}>
+      <h3 class={styles.title}>{title}</h3>
+      <p class={styles.description}>{description}</p>
+    </span>
+    <span class={styles.meta}>
+      <span class={styles.source}>{source}</span>
+      <Separator class={styles.separator} />
+      <time class={styles.date} datetime={isoDate}>{displayDate.toUpperCase()}</time>
+    </span>
+  </Card>
+</li>
