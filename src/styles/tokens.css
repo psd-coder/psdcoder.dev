@@ -52,6 +52,16 @@
   --leading-normal: 1.5;
 }
 
+:root[data-theme="dark"] {
+  --color-surface: oklch(0.16 0.01 65);
+  --color-primary: oklch(0.87 0.015 88);
+  --color-muted: oklch(from var(--color-primary) calc(l - 0.35) c h);
+  --color-border: oklch(from var(--tan) l c h / 10%);
+  --color-accent-primary: oklch(0.58 0.14 38);
+  --color-accent-secondary: oklch(0.58 0.14 120);
+  --color-accent-focus: oklch(from var(--color-accent-primary) l c h / 50%);
+}
+
 @media (--tablets) {
   :root {
     --padding: calc(var(--spacing) * 2);

@@ -7,7 +7,17 @@
   &:hover,
   &:focus-visible {
     color: var(--color-surface);
+    color-scheme: dark;
     background: var(--color-primary);
+  }
+
+  :global([data-theme="dark"]) & {
+    color-scheme: dark;
+  }
+
+  :global([data-theme="dark"]) &:hover,
+  :global([data-theme="dark"]) &:focus-visible {
+    color-scheme: light;
   }
 
   @media (--motion) {

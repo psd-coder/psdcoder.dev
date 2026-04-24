@@ -1,0 +1,114 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import styles from "./styles.module.css";
+
+type Props = HTMLAttributes<"button">;
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<button
+  data-theme-toggle
+  class:list={["bg-stripes", styles.button, className]}
+  {...rest}
+  type="button"
+  aria-label="Toggle theme"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class:list={[styles.icon, styles.icon_moon]}
+    width="18"
+    height="18"
+    fill="none"
+    viewBox="0 0 18 18"
+  >
+    <path
+      fill="currentColor"
+      d="M12 9a3 3 0 1 0-6 0 3 3 0 0 0 6 0m1.5 0a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0M8.25 2.25V.75a.75.75 0 0 1 1.5 0v1.5a.75.75 0 0 1-1.5 0M8.25 17.25v-1.5a.75.75 0 0 1 1.5 0v1.5a.75.75 0 0 1-1.5 0M2.635 2.635a.75.75 0 0 1 1.06 0L4.761 3.7A.75.75 0 0 1 3.7 4.76L2.634 3.696a.75.75 0 0 1 0-1.06M13.24 13.24a.75.75 0 0 1 1.06 0l1.066 1.065a.75.75 0 0 1-1.06 1.06L13.24 14.3a.75.75 0 0 1 0-1.06M2.25 8.25a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1 0-1.5zM17.25 8.25a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5zM3.7 13.24a.75.75 0 0 1 1.06 1.06l-1.065 1.066a.75.75 0 0 1-1.06-1.061zM14.305 2.635a.75.75 0 0 1 1.06 1.06L14.3 4.761A.75.75 0 0 1 13.24 3.7z"
+    ></path>
+  </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class:list={[styles.icon, styles.icon_sun]}
+    width="18"
+    height="18"
+    fill="none"
+    viewBox="0 0 18 18"
+  >
+    <path
+      fill="currentColor"
+      d="M8.338 1.503a.75.75 0 0 1 .673 1.193 4.5 4.5 0 0 0 6.293 6.293.75.75 0 0 1 1.192.672 7.502 7.502 0 0 1-9.1 6.63 7.5 7.5 0 0 1-5.688-5.688 7.5 7.5 0 0 1 6.63-9.1m-1.351 1.83a6 6 0 0 0-1.628.891 6 6 0 1 0 8.417 8.417c.383-.495.68-1.046.89-1.63a6 6 0 0 1-2.483.343 6 6 0 0 1-5.196-8.021"
+    ></path>
+  </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class:list={[styles.icon, styles.icon_auto]}
+    width="18"
+    height="18"
+    fill="none"
+    viewBox="0 0 18 18"
+  >
+    <path
+      fill="currentColor"
+      d="M12.294 9.858a4.5 4.5 0 0 1-2.846-1.305l-1.06 1.06a6 6 0 0 0 3.795 1.742 6 6 0 0 0 2.483-.343 6 6 0 0 1-.89 1.63 6 6 0 0 1-8.99.572l-1.061 1.06a7.5 7.5 0 0 0 7.851 1.751 7.5 7.5 0 0 0 4.92-6.364.75.75 0 0 0-1.192-.672c-.867.64-1.935.95-3.01.87"
+    ></path>
+    <path
+      fill="currentColor"
+      d="M6 9a3 3 0 0 1 5.12-2.123l1.062-1.059a4.5 4.5 0 1 0-6.364 6.364l1.06-1.06A3 3 0 0 1 6 9M2.25 8.25a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1 0-1.5zm.385-5.615a.75.75 0 0 1 1.06 0l1.066 1.064a.751.751 0 0 1-1.062 1.062L2.635 3.695a.75.75 0 0 1 0-1.06M8.25 2.25V.75a.75.75 0 0 1 1.5 0v1.5a.75.75 0 0 1-1.5 0M3.7 13.24a.75.75 0 0 1 1.06 0l-2.125 2.125a.75.75 0 0 1 0-1.06zM14.305 2.635a.75.75 0 0 1 1.06 0L13.24 4.76a.75.75 0 0 1 0-1.062z"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  type Setting = "auto" | "light" | "dark";
+
+  const CYCLE: readonly Setting[] = ["auto", "light", "dark"];
+  const LABELS: Record<Setting, string> = {
+    auto: "Theme: system",
+    light: "Theme: light",
+    dark: "Theme: dark",
+  };
+
+  const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+  const motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
+
+  function resolve(setting: Setting): "light" | "dark" {
+    if (setting === "auto") return darkQuery.matches ? "dark" : "light";
+    return setting;
+  }
+
+  function readSetting(): Setting {
+    const raw = document.documentElement.dataset.themeSetting;
+    return raw === "light" || raw === "dark" ? raw : "auto";
+  }
+
+  function apply(setting: Setting) {
+    const run = () => {
+      document.documentElement.dataset.themeSetting = setting;
+      document.documentElement.dataset.theme = resolve(setting);
+    };
+    if (!motionQuery.matches && document.startViewTransition) {
+      document.startViewTransition(run);
+    } else {
+      run();
+    }
+  }
+
+  const button = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+  if (button) {
+    button.setAttribute("aria-label", LABELS[readSetting()]);
+
+    button.addEventListener("click", () => {
+      const next = CYCLE[(CYCLE.indexOf(readSetting()) + 1) % CYCLE.length]!;
+      localStorage.setItem("theme", next);
+      apply(next);
+      button.setAttribute("aria-label", LABELS[next]);
+    });
+
+    darkQuery.addEventListener("change", () => {
+      if (readSetting() === "auto") {
+        document.documentElement.dataset.theme = resolve("auto");
+      }
+    });
+  }
+</script>

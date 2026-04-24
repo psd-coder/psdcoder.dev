@@ -30,10 +30,6 @@
   grid-column: 1;
   grid-row: 1;
   flex-shrink: 0;
-
-  .project:hover & {
-    filter: invert(1) sepia(1);
-  }
 }
 
 .content {
@@ -43,10 +39,10 @@
   flex-direction: column;
   gap: var(--padding);
 
-   @media (--mobiles) {
+  @media (--mobiles) {
     grid-column: 1;
     grid-row: 2;
-   }
+  }
 }
 
 .title {

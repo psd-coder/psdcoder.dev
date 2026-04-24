@@ -1,0 +1,44 @@
+@import url("~/styles/media.css");
+
+.button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: calc(var(--spacing) * 2);
+  border: var(--border-thin) solid var(--color-border);
+
+  color: var(--color-primary);
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-accent-focus);
+    color: var(--color-accent-primary);
+  }
+
+  @media (--motion) {
+    transition:
+      color 0.15s,
+      border-color 0.15s;
+  }
+}
+
+.icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+:global([data-theme-setting="light"]) .icon_sun {
+  display: block;
+}
+
+:global([data-theme-setting="dark"]) .icon_moon {
+  display: block;
+}
+
+:global([data-theme-setting="auto"]) .icon_auto {
+  display: block;
+}
