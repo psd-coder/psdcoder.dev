@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://psdcoder.dev/sitemap-index.xml

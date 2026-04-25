@@ -3,9 +3,11 @@ import { realpathSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import postcssPresetEnv from "postcss-preset-env";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://psdcoder.dev",
+  integrations: [sitemap()],
   fonts: [
     {
       provider: fontProviders.google(),
