@@ -33,6 +33,17 @@
   letter-spacing: var(--tracking-headline);
 }
 
+.exclaim {
+  transform-origin: 48% 85%;
+  display: inline-block;
+
+  @media (--motion) {
+    .section:hover & {
+      animation: wiggle 0.45s ease-in-out infinite;
+    }
+  }
+}
+
 .links {
   display: flex;
   flex-direction: column;
@@ -77,5 +88,20 @@
     transition:
       translate 0.15s,
       color 0.15s;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    rotate: 0deg;
+  }
+
+  25% {
+    rotate: 22deg;
+  }
+
+  75% {
+    rotate: -22deg;
   }
 }
