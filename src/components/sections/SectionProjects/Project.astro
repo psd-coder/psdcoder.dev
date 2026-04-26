@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import type { SvgComponent } from "astro/types";
 import { Card } from "~/components/ui/Card";
 import styles from "./styles.module.css";
 
@@ -7,13 +8,18 @@ type Props = {
   project: CollectionEntry<"projects">;
 };
 
+const logos = import.meta.glob<{ default: SvgComponent }>("../../../assets/projects/*.svg");
+
 const { project } = Astro.props;
 const { name, description, role, tags, href, logo } = project.data;
+const loadLogo = logos[`../../../assets/${logo}`];
+if (!loadLogo) throw new Error(`Project logo not found: ${logo}`);
+const { default: Logo } = await loadLogo();
 ---
 
 <li>
   <Card as="a" class={styles.project} href={href}>
-    <img class={styles.logo} aria-hidden="true" src={logo} alt="" width="44" height="44" />
+    <Logo class={styles.logo} width="44" height="44" aria-hidden="true" />
     <span class={styles.content}>
       <h3 class={styles.title}>
         {name}

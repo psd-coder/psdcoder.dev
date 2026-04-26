@@ -50,6 +50,8 @@
   --leading-tight: 0.86;
   --leading-headline: 0.95;
   --leading-normal: 1.5;
+
+  color-scheme: light;
 }
 
 :root[data-theme="dark"] {
@@ -60,6 +62,8 @@
   --color-accent-primary: oklch(0.58 0.14 38);
   --color-accent-secondary: oklch(0.58 0.14 120);
   --color-accent-focus: oklch(from var(--color-accent-primary) l c h / 50%);
+
+  color-scheme: dark;
 }
 
 @media (--tablets) {
