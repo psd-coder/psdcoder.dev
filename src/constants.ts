@@ -27,5 +27,5 @@ export const TWITTER_HANDLE = "@psd_coder";
 export const SOCIALS = {
   github: "https://github.com/psd-coder",
   twitter: `https://x.com/${TWITTER_HANDLE.slice(1)}`,
-  linkedin: "https://linkedin.com/in/psd-coder",
+  linkedin: "https://linkedin.com/in/psdcoder",
 } as const;
