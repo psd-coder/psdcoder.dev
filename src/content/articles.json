@@ -2,7 +2,7 @@
   {
     "id": "from-react-to-native-web-with-nanotags",
     "title": "From React to native web with nanotags: a migration that saved 100 KB",
-    "description": "Migrating an Astro site from React and Ark UI to native Web Components: 100 KB less JS, no features lost, and the birth of nanotags, a tiny library that makes Custom Elements enjoyable.",
+    "description": "Migrating an Astro site from React and Ark UI to native Web Components: 100 KB less JS, no features lost, and the birth of <a href=\"https://nanotags.psdcoder.dev/\">nanotags</a>, a tiny library that makes Custom Elements enjoyable.",
     "source": "EVIL MARTIANS",
     "date": "2026-05-06",
     "href": "https://evilmartians.com/chronicles/from-react-to-native-web-with-nanotags-a-migration-that-saved-100kb"
