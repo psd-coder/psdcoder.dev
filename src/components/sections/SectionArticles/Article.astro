@@ -19,10 +19,12 @@ const displayDate = date.toLocaleDateString("en-US", {
 ---
 
 <li>
-  <Card as="a" class={styles.card} href={href}>
+  <Card class={styles.card}>
     <span class={styles.article}>
-      <h3 class={styles.title}>{title}</h3>
-      <p class={styles.description}>{description}</p>
+      <h3 class={styles.title}>
+        <a class={styles.titleLink} href={href}>{title}</a>
+      </h3>
+      <p class={styles.description} set:html={description} />
     </span>
     <span class={styles.meta}>
       <span class={styles.source}>{source}</span>

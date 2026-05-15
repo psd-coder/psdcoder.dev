@@ -5,7 +5,8 @@
   background: var(--color-surface);
 
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &:has(:focus-visible) {
     color: var(--color-surface);
     color-scheme: dark;
     background: var(--color-primary);
@@ -16,7 +17,8 @@
   }
 
   :global([data-theme="dark"]) &:hover,
-  :global([data-theme="dark"]) &:focus-visible {
+  :global([data-theme="dark"]) &:focus-visible,
+  :global([data-theme="dark"]) &:has(:focus-visible) {
     color-scheme: light;
   }
 

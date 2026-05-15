@@ -18,13 +18,15 @@ const { default: Logo } = await loadLogo();
 ---
 
 <li>
-  <Card as="a" class={styles.project} href={href}>
+  <Card class={styles.project}>
     <Logo class={styles.logo} width="44" height="44" aria-hidden="true" />
     <span class={styles.content}>
-      <h3 class={styles.title}>
-        {name}
+      <span class={styles.heading}>
+        <h3 class={styles.title}>
+          <a class={styles.titleLink} href={href}>{name}</a>
+        </h3>
         {role && <span class={styles.role}>{role}</span>}
-      </h3>
+      </span>
       <p class={styles.description}>{description}</p>
     </span>
     <span class={styles.tags}>
