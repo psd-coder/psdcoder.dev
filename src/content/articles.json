@@ -1,5 +1,13 @@
 [
   {
+    "id": "from-react-to-native-web-with-nanotags",
+    "title": "From React to native web with nanotags: a migration that saved 100 KB",
+    "description": "Migrating an Astro site from React and Ark UI to native Web Components: 100 KB less JS, no features lost.",
+    "source": "EVIL MARTIANS",
+    "date": "2026-05-06",
+    "href": "https://evilmartians.com/chronicles/from-react-to-native-web-with-nanotags-a-migration-that-saved-100kb"
+  },
+  {
     "id": "why-vibe-coded-needs-developer",
     "title": "Why your vibe-coded project needs a developer",
     "description": "AI will happily ship you a prototype that works until it doesn't.",
