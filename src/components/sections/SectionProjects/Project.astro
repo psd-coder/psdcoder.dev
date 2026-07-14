@@ -12,14 +12,18 @@ const logos = import.meta.glob<{ default: SvgComponent }>("../../../assets/proje
 
 const { project } = Astro.props;
 const { name, description, role, tags, href, logo } = project.data;
-const loadLogo = logos[`../../../assets/${logo}`];
-if (!loadLogo) throw new Error(`Project logo not found: ${logo}`);
-const { default: Logo } = await loadLogo();
+
+let Logo: SvgComponent | undefined;
+if (logo) {
+  const loadLogo = logos[`../../../assets/${logo}`];
+  if (!loadLogo) throw new Error(`Project logo not found: ${logo}`);
+  Logo = (await loadLogo()).default;
+}
 ---
 
 <li>
-  <Card class={styles.project}>
-    <Logo class={styles.logo} width="44" height="44" aria-hidden="true" />
+  <Card class:list={[styles.project, !logo && styles.noLogo]}>
+    {Logo && <Logo class={styles.logo} width="44" height="44" aria-hidden="true" />}
     <span class={styles.content}>
       <span class={styles.heading}>
         <h3 class={styles.title}>

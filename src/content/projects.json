@@ -3,7 +3,7 @@
     "id": "typed-channel",
     "name": "Typed-Channel",
     "description": "Type-safe communication channel for sending and receiving messages between different contexts — workers, iframes, tabs, Figma plugins.",
-    "tags": ["typescript", "communication"],
+    "tags": ["communication", "events", "typescript"],
     "href": "https://typed-channel.psdcoder.dev",
     "logo": "projects/typed-channel.svg",
     "order": 3
@@ -27,6 +27,14 @@
     "order": 2
   },
   {
+    "id": "datavolve",
+    "name": "Datavolve",
+    "description": "Datavolve is a tiny, type-safe TypeScript library for versioning persisted client data, safely evolving old localStorage, IndexedDB, or JSON state to the current shape through forward-only transforms with zero dependencies in 258 bytes.",
+    "tags": ["data versioning", "migrations", "typescript"],
+    "href": "https://datavolve.psdcoder.dev",
+    "order": 4
+  },
+  {
     "id": "harmonizer",
     "name": "Harmonizer",
     "role": "developer",
@@ -34,7 +42,7 @@
     "tags": ["palette generator", "oklch", "apca", "figma plugin"],
     "href": "https://harmonizer.evilmartians.com",
     "logo": "projects/harmonizer.svg",
-    "order": 4
+    "order": 5
   },
   {
     "id": "code-to-markup",
@@ -43,6 +51,6 @@
     "tags": ["syntax highlighting", "html", "tooling"],
     "href": "https://psd-coder.github.io/code-to-markup/",
     "logo": "projects/code-to-markup.svg",
-    "order": 5
+    "order": 6
   }
 ]
