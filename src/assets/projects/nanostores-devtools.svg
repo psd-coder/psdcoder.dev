@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <style>
+    .nanostores-devtools__stroke { stroke: light-dark(#000, #fff); }
+    .nanostores-devtools__fill { fill: light-dark(#000, #fff); }
+  </style>
+  <path class="nanostores-devtools__stroke" d="M332.35 332.35 461 461" stroke-width="52" stroke-linecap="round"/>
+  <circle class="nanostores-devtools__stroke" cx="198" cy="198" r="169" stroke-width="42"/>
+  <path class="nanostores-devtools__fill" transform="translate(8 8) scale(0.76)" fill-rule="evenodd" d="M269.463 385 122 281.746l86.384-33.697 126.397 88.503zm-38.427-270 147.463 103.254-86.384 33.697-126.397-88.503z" clip-rule="evenodd"/>
+</svg>

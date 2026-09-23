@@ -6,7 +6,7 @@
     "tags": ["communication", "events", "typescript"],
     "href": "https://typed-channel.psdcoder.dev",
     "logo": "projects/typed-channel.svg",
-    "order": 3
+    "order": 4
   },
   {
     "id": "nanotags",
@@ -24,7 +24,7 @@
     "tags": ["astro", "documentation", "theme"],
     "href": "https://astro-pigment.psdcoder.dev",
     "logo": "projects/astro-pigment.svg",
-    "order": 2
+    "order": 3
   },
   {
     "id": "datavolve",
@@ -32,7 +32,16 @@
     "description": "Datavolve is a tiny, type-safe TypeScript library for versioning persisted client data, safely evolving old localStorage, IndexedDB, or JSON state to the current shape through forward-only transforms with zero dependencies in 258 bytes.",
     "tags": ["data versioning", "migrations", "typescript"],
     "href": "https://datavolve.psdcoder.dev",
-    "order": 4
+    "order": 5
+  },
+  {
+    "id": "nanostores-devtools",
+    "name": "Nanostores-Devtools",
+    "description": "Inspect Nano Stores state in the Redux DevTools extension: a bundler plugin names every store after the code you wrote, so each store becomes a key in one state tree and every write shows up as a named row in the timeline, with no per-store setup.",
+    "tags": ["nanostores", "devtools", "debugging", "bundler plugin"],
+    "href": "https://nanostores-devtools.psdcoder.dev",
+    "logo": "projects/nanostores-devtools.svg",
+    "order": 2
   },
   {
     "id": "harmonizer",
@@ -42,7 +51,7 @@
     "tags": ["palette generator", "oklch", "apca", "figma plugin"],
     "href": "https://harmonizer.evilmartians.com",
     "logo": "projects/harmonizer.svg",
-    "order": 5
+    "order": 6
   },
   {
     "id": "code-to-markup",
@@ -51,6 +60,6 @@
     "tags": ["syntax highlighting", "html", "tooling"],
     "href": "https://psd-coder.github.io/code-to-markup/",
     "logo": "projects/code-to-markup.svg",
-    "order": 6
+    "order": 7
   }
 ]
