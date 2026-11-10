@@ -33,6 +33,6 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "postcss-preset-env": "^11.2.1"
+    "postcss-preset-env": "^11.6.2"
   }
 }
