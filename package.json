@@ -19,9 +19,9 @@
     "format:prettier": "prettier . --write --experimental-cli"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/ts-plugin": "^1.10.7",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/ts-plugin": "^1.10.12",
     "@prettier/plugin-oxc": "^0.1.4",
     "astro": "^6.1.8",
     "oxlint": "^1.61.0",
