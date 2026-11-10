@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://psdcoder.dev",
+  compressHTML: true,
   integrations: [sitemap()],
   fonts: [
     {

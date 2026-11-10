@@ -19,20 +19,25 @@
     "format:prettier": "prettier . --write --experimental-cli"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/ts-plugin": "^1.10.7",
-    "@prettier/plugin-oxc": "^0.1.4",
-    "astro": "^6.1.8",
-    "oxlint": "^1.61.0",
-    "prettier": "^3.8.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "stylelint": "^17.8.0",
-    "stylelint-config-clean-order": "^8.0.1",
-    "stylelint-config-standard": "^40.0.0",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/ts-plugin": "^1.10.12",
+    "@prettier/plugin-oxc": "^0.2.3",
+    "astro": "^7.4.7",
+    "oxlint": "^1.92.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "stylelint": "^18.0.0",
+    "stylelint-config-clean-order": "^10.0.0",
+    "stylelint-config-standard": "^41.0.0",
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "postcss-preset-env": "^11.2.1"
+    "postcss-preset-env": "^11.6.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "fast-uri@^3": "^3.1.9"
+    }
   }
 }

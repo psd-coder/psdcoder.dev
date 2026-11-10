@@ -14,6 +14,8 @@ const { projects } = Astro.props;
 <Section id="open-source">
   <Fragment slot="title">Open <em>source</em></Fragment>
   <ul class={styles.grid} role="list">
-    {projects.map((project) => <Project project={project} />)}
+    {projects.map((project) => (
+      <Project project={project} />
+    ))}
   </ul>
 </Section>

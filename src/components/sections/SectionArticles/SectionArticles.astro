@@ -14,6 +14,8 @@ const { articles } = Astro.props;
 <Section id="writing">
   <Fragment slot="title">Writing</Fragment>
   <ol class={styles.list}>
-    {articles.map((article) => <Article article={article} />)}
+    {articles.map((article) => (
+      <Article article={article} />
+    ))}
   </ol>
 </Section>
