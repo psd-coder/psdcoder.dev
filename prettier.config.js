@@ -4,4 +4,5 @@ export default {
   trailingComma: "all",
   printWidth: 100,
   plugins: ["prettier-plugin-astro", "@prettier/plugin-oxc"],
+  astroCompressHTML: "html",
 };
